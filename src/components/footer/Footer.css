@@ -5,9 +5,17 @@ html{ /**Se recomienda usarlo siempre para evitar fallos a la hora del diseño d
   *, *:before, *:after{
     box-sizing: inherit;
 }
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 .footer .footerCopy{
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1rem;
+    margin-top: auto;
 }

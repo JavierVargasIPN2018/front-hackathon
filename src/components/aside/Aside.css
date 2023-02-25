@@ -17,6 +17,8 @@ html{ /**Se recomienda usarlo siempre para evitar fallos a la hora del diseño d
 .body{
     display: grid;
     grid-template-columns: 3fr 2fr;
+    margin: 2rem 0;
+    
 }
 
 .aside{
@@ -24,10 +26,10 @@ html{ /**Se recomienda usarlo siempre para evitar fallos a la hora del diseño d
     grid-row: inherit;
 }
 
-.aside .contenedor{
+.contenedor{
     max-width: 120rem;
     width: 90%;
-    
+    margin: 0 auto;
 }
 
 .aside .asideContenido{
