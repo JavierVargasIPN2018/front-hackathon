@@ -1,0 +1,36 @@
+
+html{ /**Se recomienda usarlo siempre para evitar fallos a la hora del diseño de tu pag web**/
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+  *, *:before, *:after{
+    box-sizing: inherit;
+}
+
+
+.aside{
+    display: flex;
+    justify-content: end;
+    
+}
+
+.body{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.aside{
+    grid-column: 3/4;
+    grid-row: inherit;
+}
+
+.aside .contenedor{
+    max-width: 120rem;
+    width: 90%;
+    
+}
+
+.aside .asideContenido{
+    border: 1px solid red;
+    padding: 2rem;
+}

@@ -1,7 +1,8 @@
 import { Suspense } from 'react';
 import { ThreeDots } from 'react-loader-spinner'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { NavBar ,Footer} from '../components';
+
+import { Aside, Footer, NavBar } from '../components';
 import './App.css';
 
 function App() {
