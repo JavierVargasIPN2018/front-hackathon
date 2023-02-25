@@ -21,7 +21,6 @@ export const NavBar = () => {
           <li className="nav-item">
             <a className="nav-link navbar-text" href="#">QR code</a>
           </li>
-
         </ul>
       </div>
     </nav>
