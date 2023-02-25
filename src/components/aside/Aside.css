@@ -1,28 +1,56 @@
-.aside{
-    display: flex;
-    justify-content: end;
-    
-}
-
-.body{
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    margin: 2rem 0;
-    
-}
-
-.aside{
-    grid-column: 3/4;
-    grid-row: inherit;
-}
-
 .contenedor{
     max-width: 120rem;
     width: 90%;
     margin: 0 auto;
 }
 
-.aside .asideContenido{
-    border: 1px solid red;
-    padding: 2rem;
+.body{
+    background-image: linear-gradient(to left, white 50%, #f3fbfb 0%);
+    background-position: center, -21rem 0rem;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    font-size: large;
+    text-align: center;
+    border: none;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.body .modV{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body .boyImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body .Mision{
+    width: 100%;
+}
+
+.Vision{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-image: linear-gradient(to right, white 50%, #f3fbfb 0%);
+    background-size: 100%, 100rem;
+    padding: 0;
+}
+
+.Vision .aside{
+    grid-column: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Vision .asImg{
+    grid-row: 1/2;
+}
+.asideContendio{
+    text-align: center;
+    font-size: large;
 }
