@@ -1,0 +1,1 @@
+export const logoNavbar=require('./logoNavbar.png')
