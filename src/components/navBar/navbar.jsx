@@ -10,6 +10,7 @@ export const NavBar = () => {
         <h2>Registro</h2>
         <h2>Información de la empresa</h2>
         <h2>Contactos</h2>
+        <h2>QR code</h2>
       </div>
     </div>
   )
