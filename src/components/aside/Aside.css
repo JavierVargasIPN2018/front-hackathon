@@ -4,6 +4,11 @@
     margin: 0 auto;
 }
 
+img{
+    max-width: 100%;
+    display: block;
+}
+
 .body{
     background-image: linear-gradient(to left, white 50%, #f3fbfb 0%);
     background-position: center, -21rem 0rem;
@@ -15,6 +20,7 @@
     border: none;
     margin-bottom: 2rem;
     margin-top: 1rem;
+    text-align: justify;
 }
 
 .body .modV{
@@ -39,6 +45,7 @@
     background-image: linear-gradient(to right, white 50%, #f3fbfb 0%);
     background-size: 100%, 100rem;
     padding: 0;
+    text-align: justify;
 }
 
 .Vision .aside{
@@ -53,4 +60,19 @@
 .asideContendio{
     text-align: center;
     font-size: large;
+}
+
+@media screen and (max-width: 700px){
+    .body{
+        background-image: linear-gradient(to top, white 50%, #f3fbfb 0%);
+        background-position: center, -21rem 0rem;
+        padding: 0;
+        display: block;
+    }
+    .Vision{
+        display: block;
+        background-image: linear-gradient(to bottom, white 50%, #f3fbfb 0%);
+        background-size: 100%, 100rem;
+        padding: 0;
+    }
 }
