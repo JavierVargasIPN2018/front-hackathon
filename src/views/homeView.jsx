@@ -1,8 +1,7 @@
-import { Aside, Footer, NavBar } from "../components"
+import { Aside } from "../components"
 
 export const HomeView = () => {
   return (
     <Aside/>
-
   )
 }

@@ -1,15 +1,10 @@
-html{ /**Se recomienda usarlo siempre para evitar fallos a la hora del diseño de tu pag web**/
-    box-sizing: border-box;
-    font-size: 90%; /* 1rem = 10px */
-}
-  *, *:before, *:after{
-    box-sizing: inherit;
-}
 
 .footer{
     position: absolute;
     bottom: 0;
+    height: 6rem;
     width: 100%;
+    background-color: rgb(148, 148, 148);
 }
 
 .footer .footerCopy{
