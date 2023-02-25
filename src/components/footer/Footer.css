@@ -10,8 +10,5 @@ html{ /**Se recomienda usarlo siempre para evitar fallos a la hora del diseño d
     justify-content: center;
     align-items: center;
     font-size: 1rem;
-
     background-color: #187498;
-
-    line-height: 0;
 }
