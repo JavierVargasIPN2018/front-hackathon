@@ -1,9 +1,9 @@
 import './navbar.css'
-import { logoNavbar } from '../../assets/'
+import { logoNavbar, Oficial } from '../../assets/'
 export const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg">
-      <img className='imgNavbar' src={logoNavbar} />
+      <img className='imgNavbar' src={Oficial} />
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>

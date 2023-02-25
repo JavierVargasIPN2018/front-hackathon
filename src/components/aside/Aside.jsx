@@ -6,7 +6,8 @@ export const Aside = () => {
     <>
         <body className="body">
           <div className="contenedor modV">
-            <p className="">MISIÓN DE LA EMPRESA <br/>
+          <h2>MISIÓN DE LA EMPRESA</h2>
+            <p className=""> <br/>
             Proporcionar información del sector salud de carácter personal a nivel internacional, 
             que sobrepasen las fronteras de reacción y atención médica ante cualquier situación, 
             generando rentabilidad sostenida con la participación de un equipo altamente especializado 
@@ -18,7 +19,8 @@ export const Aside = () => {
         </body>
         <div className="Vision">
           <div className="aside">
-              <p className="contenedor asideContenido">VISION DE LA EMPRESA <br/>
+              <h2>VISION DE LA EMPRESA</h2>
+              <p className="contenedor asideContenido"> <br/>
                 Ser líderes a nivel internacional en la adquisición y proporción de información médica de 
                   forma segura respecto a antecedentes, alergias y tratamientos para superar la reacción y atención 
                 a usuarios en situaciones de alta – emergencia, construyendo alianzas estratégicas con redes de hospitales 
