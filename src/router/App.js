@@ -17,6 +17,7 @@ function App() {
       }>
         <div className="App">
           <NavBar />
+          <Aside/>
           <Routes>
             {/* <Route path="/" element={<HomeView />} /> */}
           </Routes>
