@@ -1,11 +1,13 @@
-import { Suspense } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { ThreeDots } from 'react-loader-spinner'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Aside, Footer, NavBar } from '../components';
 import { Presentacion, HomeView, Register, Buffet } from '../views';
 import './App.css';
 
+
 function App() {
+  
   return (
     <div className='app'>
       <Router>
