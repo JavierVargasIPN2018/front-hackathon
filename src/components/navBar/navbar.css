@@ -1,33 +1,19 @@
-.navBar {
+.navbar-expand-lg {
     background-color: #187498;
-    height: 3rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 
-.navBar h2 {
+.active {
+    background-color: #38A3A5;
+}
+
+.navbar-text {
     color: white;
-    font-size: large;
 }
 
-.navBar .one {
-    flex: 2;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.imgNavbar {
+    width: 5%;
+    padding-right: 1rem;
 }
-
-.navBar .second {
-    flex: 3;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
-}
-
-.navBar .one .imgNavbar {
-    width: 8%;
-    padding: 0.1rem;
-    margin: 4rem;
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }

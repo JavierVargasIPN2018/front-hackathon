@@ -1,1 +1,1 @@
-export const logoNavbar=require('./logoNavbar.png')
+export const logoNavbar=require('./logo2.jpg')
