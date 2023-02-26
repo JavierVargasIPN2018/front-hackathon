@@ -3,6 +3,7 @@ import { Button } from "@mui/material"
 import { useSolana } from '../hooks';
 import { Aside } from "../components"
 import './homeView.css'
+
 export const HomeView = () => {
   const { checkIfWalletIsConnected, getGifList, walletAddress, connectWallet, createGifAccount } = useSolana()
   const submitContract = () => {
@@ -21,6 +22,7 @@ export const HomeView = () => {
       getGifList();
     }
   }, [walletAddress]);
+
   return (
     <div className="homeView">
       <div>
@@ -35,14 +37,3 @@ export const HomeView = () => {
     </div>
   )
 }
-
-
-/*  <Button variant="contained" onClick={sendGif}>Enviar gif</Button>
-        <TextField
-          id="outlined-required"
-          label="gif link"
-          name="gif"
-          onChange={onInputChange}
-          value={gif}
-        />
-        <Button variant="contained" onClick={createGifAccount}>Crear contrato</Button> */

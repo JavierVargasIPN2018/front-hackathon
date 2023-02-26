@@ -1,0 +1,51 @@
+.contenedor{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+ul{
+    list-style: none;
+}
+
+.listDoc{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.hospitales{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5rem;
+}
+
+.imgH{
+    max-width: 30%;
+    display: block;
+}
+
+.nHos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+@media (max-width: 768px){
+    .listDoc{
+        display: block;
+    }
+    .Doc{
+        padding-top: 1rem;
+    }
+    .hospitales{
+        display: block;
+    }
+    .imgH{
+        display: none;
+    }
+}

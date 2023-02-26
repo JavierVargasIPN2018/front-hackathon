@@ -2,7 +2,7 @@ import { Suspense, useEffect, useState } from 'react';
 import { ThreeDots } from 'react-loader-spinner'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Aside, Footer, NavBar } from '../components';
-import { Presentacion, HomeView, Register, Buffet } from '../views';
+import { Presentacion, HomeView, Register, Buffet, Information, Contacts } from '../views';
 import './App.css';
 
 
@@ -24,7 +24,8 @@ function App() {
               <Route path="/" element={<HomeView />} />
               <Route path="/presentation" element={<Presentacion />} />
               <Route path="/register" element={<Register />} />
-              <Route path="/buffet" element={<Buffet/>} />
+              <Route path="/information" element={<Information />} />
+              <Route path="/contacts" element={<Contacts />} />
             </Routes>
             <Footer />
           </div>
