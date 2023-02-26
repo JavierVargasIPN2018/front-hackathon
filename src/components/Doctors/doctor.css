@@ -35,7 +35,11 @@ ul{
     text-align: justify;
 }
 
-@media (max-width: 768px){
+.nHos h3{
+    text-align: center;
+}
+
+@media (max-width: 800px){
     .listDoc{
         display: block;
     }
@@ -48,4 +52,5 @@ ul{
     .imgH{
         display: none;
     }
+    
 }
