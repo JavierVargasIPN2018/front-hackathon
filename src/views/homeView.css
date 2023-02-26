@@ -1,6 +1,10 @@
-.homeView{
+.homeView {
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+.homeView a {
+    color: #38A3A5;
 }

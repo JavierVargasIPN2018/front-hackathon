@@ -28,8 +28,11 @@ export const HomeView = () => {
       <div>
         {
           (walletAddress != null)
-            ? <h3>Concectado con tu wallet</h3>
-            : <Button variant="contained" onClick={connectWallet}>Conecta con tu wallet</Button>
+            ? <>
+              <h3>Concectado con tu wallet</h3>
+              <a href="/register">Ve a registro aqui.</a>
+            </>
+            : <Button variant="contained" onClick={connectWallet}>!Conectado con tu wallet¡</Button>
         }
 
       </div>

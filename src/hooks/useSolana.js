@@ -2,16 +2,17 @@ import { Connection, PublicKey, clusterApiUrl } from '@solana/web3.js';
 import { Program, AnchorProvider, web3 } from '@project-serum/anchor';
 import { useState, useEffect } from 'react'
 import { Buffer } from "buffer";
+import Swal from 'sweetalert2';
 import kp from '../keypair.json'
 window.Buffer = Buffer;
 export const useSolana = () => {
     const { SystemProgram, Keypair } = web3;
 
     // Create a keypair for the account that will hold the GIF data.
-    const arr = Object.values(kp._keypair.secretKey)
+    /* const arr = Object.values(kp._keypair.secretKey)
     const secret = new Uint8Array(arr)
-    const baseAccount = web3.Keypair.fromSecretKey(secret)
-    //let baseAccount = Keypair.generate();
+    const baseAccount = web3.Keypair.fromSecretKey(secret) */
+    let baseAccount = Keypair.generate();
     const programID = new PublicKey('3Yy4unGR4nrqbdAMayEtyVf1h6vCkJQr4XpyWBBktc9x');
     const network = clusterApiUrl('devnet');
     const opts = {
@@ -42,7 +43,12 @@ export const useSolana = () => {
                 },
                 signers: [baseAccount],
             });
-            console.log("Created a new BaseAccount w/ address:", baseAccount.publicKey.toString());
+            Swal.fire({
+                title: "¡Created a new contract!",
+                icon: "success",
+                confirmButtonText: "Continuar",
+            });
+            //console.log("Created a new BaseAccount w/ address:", baseAccount.publicKey.toString());
             await getGifList();
         } catch (error) {
             console.log(error);
@@ -56,11 +62,21 @@ export const useSolana = () => {
                 if (solana.isPhantom) {
                     console.log("Phantom wallet found!");
                     const response = await solana.connect({ onlyIfTrusted: true });
-                    console.log("Connected with Public Key:", response.publicKey.toString());
+                    Swal.fire({
+                        title: "¡Connected with Public Key!",
+                        icon: "success",
+                        text: 'Are you ready to register',
+                        confirmButtonText: "Continuar",
+                    });
+                    //console.log("Connected with Public Key:", response.publicKey.toString());
                     setWalletAddress(response.publicKey.toString());
                 }
             } else {
-                alert("Solana object not found! Get a Phantom Wallet 👻");
+                Swal.fire({
+                    title: "¡Solana object not found! Get a Phantom Wallet 👻!",
+                    icon: "warning",
+                    confirmButtonText: "Continuar",
+                });
             }
         } catch (error) {
             console.error(error);
@@ -71,7 +87,6 @@ export const useSolana = () => {
         try {
             const program = await getProgram();
             const account = await program.account.baseAccount.fetch(baseAccount.publicKey);
-
             console.log("Got the account", account);
             setGifList(account.gifList);
         } catch (error) {
@@ -84,16 +99,19 @@ export const useSolana = () => {
         const { solana } = window;
         if (solana) {
             const response = await solana.connect();
-            console.log("Connected with Public Key:", response.publicKey.toString());
+            Swal.fire({
+                title: "¡Connected with Public Key!",
+                icon: "success",
+                text: 'Are you ready to register',
+                confirmButtonText: "Continuar",
+            });
+
+            //console.log("Connected with Public Key:", response.publicKey.toString());
             setWalletAddress(response.publicKey.toString());
         }
     };
 
     const sendGif = async (formState) => {
-        /*   if (formState.length === 0) {
-              alert('Sin información para guardar')
-              return;
-          } */
         console.log("Gif link:", formState);
         try {
             const provider = getProvider();
@@ -112,14 +130,24 @@ export const useSolana = () => {
                         user: provider.wallet.publicKey,
                     },
                 });
-            alert("FormState successfully sent to program");
+            Swal.fire({
+                title: "¡FormState successfully sent to program!",
+                icon: "success",
+                confirmButtonText: "Continuar",
+            });
             await getGifList();
         } catch (error) {
+            Swal.fire({
+                title: "¡Error al enviar tus datos!",
+                icon: "error",
+                confirmButtonText: "Continuar",
+            });
             console.log("Error sending FormState:", error);
         }
     };
     return {
         sendGif,
+        gifList,
         connectWallet,
         walletAddress,
         getGifList,

@@ -1,3 +1,13 @@
-.Register{
+.Register {
     margin-top: 3rem;
+    width: 100%;
+}
+
+.anyWallet {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
