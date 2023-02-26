@@ -1,19 +1,45 @@
 import { TextField, Box, Button } from "@mui/material"
 import './register.css'
-import { useForm } from "../hooks"
-import { useState } from "react"
+import { useForm, useSolana } from "../hooks"
+import { useState, useEffect } from "react"
 const formData = {
     nombre: '',
     apPaterno: '',
     apMaterno: '',
+    numeroDeContacto: '',
+    numeroDeSeguroSocial: '',
+    curp: '',
+    tipoDeSangre: '',
+    numeroDePasaporte: ''
 }
 const formDataValid = {
     nombre: [(value) => value.length >= 1, 'Requerido'],
     apPaterno: [(value) => value.length >= 1, 'Requerido'],
 }
 export const Register = () => {
+    const { checkIfWalletIsConnected, getGifList, walletAddress, connectWallet, createGifAccount, sendGif } = useSolana()
     const [formSubmitted, setformSubmitted] = useState(false)
-    const { nombre,apPaterno,apMaterno,onInputChange,nombreValid,apPaternoValid,apMaternoValid} = useForm(formData,formDataValid);
+    const { nombre, apPaterno, apMaterno, numeroDeContacto, numeroDeSeguroSocial, curp, tipoDeSangre, numeroDePasaporte, onInputChange, nombreValid, apPaternoValid, formState } = useForm(formData, formDataValid);
+    const submitRegister = () => {
+        console.log(formState)
+        sendGif(formState)
+    }
+    const submitContract = () => {
+        createGifAccount()
+    }
+    useEffect(() => {
+        const onLoad = async () => {
+            await checkIfWalletIsConnected();
+        };
+        window.addEventListener("load", onLoad);
+        return () => window.removeEventListener("load", onLoad);
+    }, []);
+    useEffect(() => {
+        if (walletAddress) {
+            console.log("Fetching GIF list...");
+            getGifList();
+        }
+    }, [walletAddress]);
     return (
         <Box
             sx={{
@@ -45,37 +71,48 @@ export const Register = () => {
                 <TextField
                     id="outlined-required"
                     label="Apellido Materno"
-                    name="Apellido Materno"
+                    name="apMaterno"
                     value={apMaterno}
                     onChange={onInputChange}
                 />
                 <TextField
                     id="outlined-required"
                     label="Número de contacto"
-                    name="Número de contacto"
+                    name="numeroDeContacto"
+                    value={numeroDeContacto}
+                    onChange={onInputChange}
                 />
                 <TextField
                     id="outlined-required"
                     label="Número seguro social"
-                    name="Número seguro social"
+                    name="numeroDeSeguroSocial"
+                    value={numeroDeSeguroSocial}
+                    onChange={onInputChange}
                 />
                 <TextField
                     id="outlined-required"
                     label="Curp"
-                    name="Curp"
+                    name="curp"
+                    value={curp}
+                    onChange={onInputChange}
                 />
                 <TextField
                     id="outlined-required"
                     label="Tipo de sangre"
-                    name="Tipo de sangre"
+                    name="tipoDeSangre"
+                    value={tipoDeSangre}
+                    onChange={onInputChange}
                 />
                 <TextField
                     id="outlined-required"
                     label="Número de pasaporte"
-                    name="Número de pasaporte"
+                    name="numeroDePasaporte"
+                    value={numeroDePasaporte}
+                    onChange={onInputChange}
                 />
                 <div>
-                    <Button variant="contained">Continuar</Button>
+                    <Button variant="contained" onClick={submitRegister}>Continuar</Button>
+                    <Button variant="contained" onClick={submitContract}>Crear contacto</Button>
                 </div>
 
             </div>
