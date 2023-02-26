@@ -9,10 +9,10 @@ export const useSolana = () => {
     const { SystemProgram, Keypair } = web3;
 
     // Create a keypair for the account that will hold the GIF data.
-    /* const arr = Object.values(kp._keypair.secretKey)
+    const arr = Object.values(kp._keypair.secretKey)
     const secret = new Uint8Array(arr)
-    const baseAccount = web3.Keypair.fromSecretKey(secret) */
-    let baseAccount = Keypair.generate();
+    const baseAccount = web3.Keypair.fromSecretKey(secret)
+    //let baseAccount = Keypair.generate();
     const programID = new PublicKey('3Yy4unGR4nrqbdAMayEtyVf1h6vCkJQr4XpyWBBktc9x');
     const network = clusterApiUrl('devnet');
     const opts = {
@@ -133,6 +133,7 @@ export const useSolana = () => {
             Swal.fire({
                 title: "¡FormState successfully sent to program!",
                 icon: "success",
+                text: 'Ve a registros exitosos para verlo',
                 confirmButtonText: "Continuar",
             });
             await getGifList();

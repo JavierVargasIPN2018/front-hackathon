@@ -123,7 +123,7 @@ export const Register = () => {
                                         onChange={onInputChange}
                                     />
                                     <div>
-                                        <Button variant="contained" onClick={submitRegister}>Continuar</Button>
+                                        <Button variant="contained" onClick={submitRegister}>Enviar registro</Button>
 
                                     </div>
                                 </> :

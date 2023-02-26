@@ -6,9 +6,6 @@ import './homeView.css'
 
 export const HomeView = () => {
   const { checkIfWalletIsConnected, getGifList, walletAddress, connectWallet, createGifAccount } = useSolana()
-  const submitContract = () => {
-    createGifAccount()
-  }
   useEffect(() => {
     const onLoad = async () => {
       await checkIfWalletIsConnected();
@@ -32,7 +29,7 @@ export const HomeView = () => {
               <h3>Concectado con tu wallet</h3>
               <a href="/register">Ve a registro aqui.</a>
             </>
-            : <Button variant="contained" onClick={connectWallet}>!Conectado con tu wallet¡</Button>
+            : <Button variant="contained" onClick={connectWallet}>!Conecta con tu wallet¡</Button>
         }
 
       </div>

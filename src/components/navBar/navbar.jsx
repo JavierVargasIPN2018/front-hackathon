@@ -20,6 +20,9 @@ export const NavBar = () => {
             <a className="nav-link navbar-text" href="/contacts">Contactos</a>
           </li>
           <li className="nav-item">
+            <a className="nav-link navbar-text" href="/lastRegisters">Registros exitosos</a>
+          </li>
+          <li className="nav-item">
             <a className="nav-link navbar-text" href="/qr">QR code</a>
           </li>
         </ul>

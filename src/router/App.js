@@ -3,7 +3,7 @@ import { ThreeDots } from 'react-loader-spinner'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Footer, NavBar } from '../components';
 import { useSolana } from '../hooks';
-import { Presentacion, HomeView, Register, Information, Contacts } from '../views';
+import { Presentacion, HomeView, Register, Information, Contacts,LastRegisters } from '../views';
 import { QrCod } from '../views/QR';
 import './App.css';
 
@@ -30,6 +30,7 @@ function App() {
               <Route path="/information" element={<Information />} />
               <Route path="/contacts" element={<Contacts />} />
               <Route path="/qr" element={<QrCod/>} />
+              <Route path="/lastRegisters" element={<LastRegisters/>} />
             </Routes>
             <Footer />
           </div>
