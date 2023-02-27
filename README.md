@@ -20,4 +20,4 @@ Se necesitara node js para poder ejecutar un comando npm i y adquirir todos los 
 ## Autores ✒️
 
 * **Vargas Medina Javier Eduardo** - *Proyect manager* - [Linkedin](https://www.linkedin.com/in/javier-eduardo-vargas-medina-61a434223)
-* **Ramos Cruz Angel Uriel** - *Developer Jr* - 
+* **Ramos Cruz Angel Uriel** - *Developer Jr* -  [Linkedin](https://www.linkedin.com/in/angel-uriel-ramos-cruz-954ba2251/)
